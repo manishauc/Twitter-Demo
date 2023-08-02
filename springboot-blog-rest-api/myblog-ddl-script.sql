@@ -1,3 +1,4 @@
+CREATE DATABASE myblog;
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -32,3 +33,6 @@ CREATE TABLE `user_roles` (
   CONSTRAINT `FKh8ciramu9cc9q3qcqiv4ue8a6` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`),
   CONSTRAINT `FKhfh9dx7w3ubf1co1vdev94g3f` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `myblog`.`roles` (`id`, `name`) VALUES ('1', 'ROLE_USER');
+INSERT INTO `myblog`.`roles` (`id`, `name`) VALUES ('2', 'ROLE_ADMIN');
